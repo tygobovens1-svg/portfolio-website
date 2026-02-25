@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     // Add slight delay for visual effect
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
-    }, 0);
+    }, 500);
 });
 
 const nav = document.querySelector('.hud-nav');
