@@ -3,12 +3,12 @@ document.documentElement.classList.add('loading-lock');
 
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loadingScreen');
-    
+
     // Add slight delay for visual effect
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
         document.documentElement.classList.remove('loading-lock');
-    }, 5000);
+    }, 500);
 });
 
 const nav = document.querySelector('.hud-nav');
