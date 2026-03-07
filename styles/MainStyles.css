@@ -848,10 +848,17 @@ textarea,
   align-items: stretch;
   justify-content: flex-start;
   gap: 20px;
-  animation: fadeInUp 0.8s ease both;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
   box-shadow:
     -10px -10px 20px -20px rgba(140, 175, 255, 0.35),
     10px 10px 20px -20px rgba(140, 175, 255, 0.3);
+}
+
+.profile-top.profile-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .profile-picture {
@@ -1130,8 +1137,53 @@ textarea,
 }
 
 .profile-contact a {
-  display: block;
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+  color: var(--main-text-color);
+  text-decoration: none;
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
   margin-bottom: 6px;
+}
+
+.profile-contact a::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateX(-2px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.profile-contact a::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.72);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+
+.profile-contact a:hover,
+.profile-contact a:focus-visible {
+  opacity: 1;
+}
+
+.profile-contact a:hover::before,
+.profile-contact a:focus-visible::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.profile-contact a:hover::after,
+.profile-contact a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .profile-contact a:last-child {

@@ -42,6 +42,7 @@ if (nav && navToggle) {
 window.addEventListener('DOMContentLoaded', () => {
     const heroCtaButton = document.querySelector('.cta-button');
     const profileSection = document.getElementById('profile-section');
+    const pilotProfileTop = document.querySelector('.profile-top');
     const skillsPanel = document.getElementById('skills');
     const projectsPanel = document.getElementById('project-section');
 
@@ -77,6 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     };
 
+    setupRevealObserver(pilotProfileTop, 'profile-visible');
     setupRevealObserver(skillsPanel, 'skills-visible');
     setupRevealObserver(projectsPanel, 'projects-visible');
 });
