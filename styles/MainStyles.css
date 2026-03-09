@@ -38,7 +38,7 @@
   --project-panel-width: 2.2fr;
   --skills-panel-width: 1fr;
   --project-panel-height: 440px;
-  --skills-panel-height: 440px;
+  --skills-panel-height: 390px;
   --projects-grid-columns: 3;
   --projects-grid-rows: 2;
 
@@ -1577,6 +1577,57 @@ textarea,
   gap: var(--panel-gap);
 }
 
+.side-panels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--panel-gap);
+  min-width: 0;
+}
+
+.system-metrics-panel {
+  width: 100%;
+  border-top: var(--hud-border-top);
+  border-bottom: var(--hud-border-bottom);
+  border-left: var(--hud-border-left);
+  background: transparent;
+  padding: 14px 18px;
+}
+
+.system-metrics-panel h2 {
+  font-family: "Inter", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  margin-bottom: 8px;
+}
+
+.system-metrics {
+  width: 100%;
+  margin: 0;
+  min-height: 150px;
+  background: var(--hud-panel-bg);
+  font-family: "Inter", monospace;
+  font-size: clamp(0.78rem, 1vw, 0.92rem);
+  line-height: 1.65;
+  letter-spacing: 0.6px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  color: var(--main-text-color);
+  opacity: 0.78;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.system-metrics:hover {
+  border-top-color: rgba(255, 255, 255, 0.52);
+  border-left-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  opacity: 0.9;
+}
+
+#visitor-count {
+  font-weight: 700;
+}
+
 
 
 /* Responsive Design */
@@ -1613,6 +1664,10 @@ textarea,
 
   .panel-holder {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .side-panels {
     gap: 14px;
   }
 
@@ -1728,7 +1783,8 @@ textarea,
   }
 
   .panel-holder,
-  .project-projects {
+  .project-projects,
+  .side-panels {
     grid-template-columns: 1fr;
   }
 
@@ -1773,6 +1829,16 @@ textarea,
 
   .skills-panel {
     padding: 14px;
+  }
+
+  .system-metrics-panel {
+    padding: 12px;
+  }
+
+  .system-metrics {
+    min-height: 132px;
+    padding: 10px 12px;
+    font-size: 0.78rem;
   }
 
   .project-projects {

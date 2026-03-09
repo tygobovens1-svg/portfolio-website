@@ -65,7 +65,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/MainStyles.css" />
+    <script
+      data-goatcounter="https://tygobovens.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
     <script src="scripts/MainScript.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("https://tygoportfolio.goatcounter.com/counter/TOTAL.json")
+          .then((res) => res.json())
+          .then((data) => {
+            const visitorCount = document.getElementById("visitor-count");
+            if (visitorCount) {
+              visitorCount.textContent = data.count;
+            }
+          })
+          .catch(() => {
+            const visitorCount = document.getElementById("visitor-count");
+            if (visitorCount) {
+              visitorCount.textContent = "N/A";
+            }
+          });
+      });
+    </script>
   </head>
 
   <body>
@@ -213,59 +236,59 @@
 <span class="project-card-title">[ FEATURED_PROJECT ]</span>
 ─────────────────────
 > NAME: Portfolio Engine
-> STACK: React / Node
-> STATUS: Active Build
+> STACK: HTML5 / CSS3
+> STATUS: Active
+> YEAR: 2026
+
+[ <a class="project-link" href="#">VIEW_PROJECT</a> ]
+            </pre>
+              <pre class="project-pre">
+<span class="project-card-title">[ PROJECT_02 ]</span>
+─────────────────────
+> NAME: Calculator
+> STACK: JS / CSS
+> STATUS: In Progress
 > YEAR: 2026
 
 [ <a class="project-link" href="project-under-construction.html">VIEW_PROJECT</a> ]
             </pre>
               <pre class="project-pre">
-<span class="project-card-title">[ PROJECT_02 ]</span>
-─────────────────────
-> NAME: Portfolio Engine
-> STACK: React / Node
-> STATUS: Completed
-> YEAR: 2025
-
-[ <a class="project-link" href="project-under-construction.html">VIEW_PROJECT</a> ]
-            </pre>
-              <pre class="project-pre">
 <span class="project-card-title">[ PROJECT_03 ]</span>
 ─────────────────────
-> NAME: Portfolio Engine
-> STACK: React / Node
-> STATUS: Completed
-> YEAR: 2025
+> NAME: Rock Paper Scissors
+> STACK: Python
+> STATUS: In Progress
+> YEAR: 2026
 
 [ <a class="project-link" href="project-under-construction.html">VIEW_PROJECT</a> ]
             </pre>
             <pre class="project-pre">
 <span class="project-card-title">[ PROJECT_04 ]</span>
 ─────────────────────
-> NAME: Portfolio Engine
-> STACK: React / Node
-> STATUS: Completed
-> YEAR: 2025
+> NAME: Weather App
+> STACK: JS / API
+> STATUS: In Progress
+> YEAR: 2026
 
 [ <a class="project-link" href="project-under-construction.html">VIEW_PROJECT</a> ]
             </pre>
             <pre class="project-pre">
-<span class="project-card-title">[ PROJECT_03 ]</span>
+<span class="project-card-title">[ PROJECT_05 ]</span>
 ─────────────────────
-> NAME: Portfolio Engine
-> STACK: React / Node
-> STATUS: Completed
-> YEAR: 2025
+> NAME: Tic-Tac-Toe
+> STACK: C# / .NET
+> STATUS: In Progress
+> YEAR: 2026
 
 [ <a class="project-link" href="project-under-construction.html">VIEW_PROJECT</a> ]
             </pre>
             <pre class="project-pre">
-<span class="project-card-title">[ PROJECT_04 ]</span>
+<span class="project-card-title">[ PROJECT_06 ]</span>
 ─────────────────────
-> NAME: Portfolio Engine
-> STACK: React / Node
-> STATUS: Completed
-> YEAR: 2025
+> NAME: CSS Art
+> STACK: HTML / CSS
+> STATUS: In Progress
+> YEAR: 2026
 
 [ <a class="project-link" href="project-under-construction.html">VIEW_PROJECT</a> ]
             </pre>
@@ -273,24 +296,35 @@
           </div>
 
 <!-- skills -->
-          <div
-            id="skills"
-            class="profile-subsection skills-panel frame-corners"
-          >
-            <h2>[ SKILLS ]</h2>
-            <div class="skills-items">
-              <p class="skill-line"><span class="skill-name">HTML</span><span class="skill-bar" style="--fill: 8;"></span></p>
-              <p class="skill-line"><span class="skill-name">CSS</span><span class="skill-bar" style="--fill: 7;"></span></p>
-              <p class="skill-line"><span class="skill-name">JS</span><span class="skill-bar" style="--fill: 5;"></span></p>
-              <p class="skill-line"><span class="skill-name">C#</span><span class="skill-bar" style="--fill: 4;"></span></p>
-              <p class="skill-line"><span class="skill-name">SQL</span><span class="skill-bar" style="--fill: 6;"></span></p>
-              <p class="skill-line"><span class="skill-name">Git</span><span class="skill-bar" style="--fill: 5;"></span></p>
-              <p class="skill-line"><span class="skill-name">.NET</span><span class="skill-bar" style="--fill: 3;"></span></p>
-              <p class="skill-line"><span class="skill-name">DevOps</span><span class="skill-bar" style="--fill: 6;"></span></p>
+          <div class="side-panels">
+            <div
+              id="skills"
+              class="profile-subsection skills-panel frame-corners"
+            >
+              <h2>[ SKILLS ]</h2>
+              <div class="skills-items">
+                <p class="skill-line"><span class="skill-name">HTML</span><span class="skill-bar" style="--fill: 8;"></span></p>
+                <p class="skill-line"><span class="skill-name">CSS</span><span class="skill-bar" style="--fill: 7;"></span></p>
+                <p class="skill-line"><span class="skill-name">JS</span><span class="skill-bar" style="--fill: 5;"></span></p>
+                <p class="skill-line"><span class="skill-name">C#</span><span class="skill-bar" style="--fill: 4;"></span></p>
+                <p class="skill-line"><span class="skill-name">SQL</span><span class="skill-bar" style="--fill: 6;"></span></p>
+                <p class="skill-line"><span class="skill-name">Git</span><span class="skill-bar" style="--fill: 5;"></span></p>
+                <p class="skill-line"><span class="skill-name">.NET</span><span class="skill-bar" style="--fill: 3;"></span></p>
+                <p class="skill-line"><span class="skill-name">DevOps</span><span class="skill-bar" style="--fill: 6;"></span></p>
+              </div>
+              <div class="skills-learning">
+                <p class="learning-title">[ STILL LEARNING ]</p>
+                <p class="learning-items">Python | React | Node | TypeScript</p>
+              </div>
             </div>
-            <div class="skills-learning">
-              <p class="learning-title">[ STILL LEARNING ]</p>
-              <p class="learning-items">Python | React | Node | TypeScript</p>
+
+            <div class="profile-subsection system-metrics-panel frame-corners">
+              <h2>[ SYSTEM_METRICS ]</h2>
+              <pre class="system-metrics">
+──────────────────
+> VISITORS: <span id="visitor-count">LOADING...</span>
+> STATUS: ACTIVE
+              </pre>
             </div>
           </div>
         </div>
