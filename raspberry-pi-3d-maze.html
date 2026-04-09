@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Project page for Raspberry Pi 3D Maze with a video demo and explanation."
+    />
+    <title>PROJECT | Raspberry Pi 3D Maze</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/MainStyles.css" />
+    <script src="scripts/MainScript.js"></script>
+  </head>
+
+  <body>
+    <div id="loadingScreen" class="loading-screen">
+      <div class="loading-title">
+        <h2>INITIALIZING</h2>
+        <p>NEURAL NETWORK</p>
+      </div>
+
+      <div class="loading-spinner"></div>
+
+      <div class="loading-status">
+        <div class="status-item">
+          <span class="status-label">SYSTEMS</span>
+          <span class="status-bar"><span class="status-fill"></span></span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">CORE</span>
+          <span class="status-bar"><span class="status-fill"></span></span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">INTERFACE</span>
+          <span class="status-bar"><span class="status-fill"></span></span>
+        </div>
+      </div>
+
+      <div class="mecha-code">
+        <div class="code-line">
+          <span class="code-symbol">></span>
+          <span class="code-text">Portfolio Engine v2.0</span>
+        </div>
+        <div class="code-line">
+          <span class="code-symbol">></span>
+          <span class="code-text">Loading assets...</span>
+        </div>
+        <div class="code-line">
+          <span class="code-symbol">></span>
+          <span class="code-text">Sync complete</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero project-hero">
+      <div class="hero-lines">
+        <div class="line horizontal"></div>
+        <div class="line vertical"></div>
+      </div>
+
+      <div class="hero-corners">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-label">[ PROJECT_02 ]</div>
+        <h1 class="hero-title">Raspberry Pi 3D Maze</h1>
+        <p class="hero-subtitle">VIDEO DEMO + PROJECT EXPLANATION</p>
+        <p class="hero-description">
+          This page contains a short video preview of the Raspberry Pi 3D Maze
+          and explains how the project works.
+        </p>
+        <a class="cta-button" href="index.html#project-section">[ BACK_TO_PORTFOLIO ]</a>
+      </div>
+    </header>
+
+    <main class="project-video-page">
+      <section class="project-video-panel frame-corners" aria-labelledby="video-title">
+        <h2 id="video-title">[ VIDEO ] Raspberry Pi 3D Maze</h2>
+
+        <div class="video-wrapper">
+          <video controls preload="metadata" aria-label="Raspberry Pi 3D Maze demo video">
+            <source src="videos/WhatsApp Video 2026-04-08 at 11.58.49.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p class="project-video-description">
+          In this demo you can see the maze responding to movement input, with the
+          Raspberry Pi controlling the game logic and real-time updates. The goal
+          of the project is to combine hardware controls with a 3D-style maze
+          experience and smooth interaction.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

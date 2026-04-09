@@ -73,19 +73,21 @@
     <script src="scripts/MainScript.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", () => {
+        const visitorCount = document.getElementById("visitor-count");
+
+        const setVisitorCount = (value) => {
+          if (visitorCount) {
+            visitorCount.textContent = value;
+          }
+        };
+
         fetch("https://tygoportfolio.goatcounter.com/counter/TOTAL.json")
           .then((res) => res.json())
           .then((data) => {
-            const visitorCount = document.getElementById("visitor-count");
-            if (visitorCount) {
-              visitorCount.textContent = data.count;
-            }
+            setVisitorCount(data.count);
           })
           .catch(() => {
-            const visitorCount = document.getElementById("visitor-count");
-            if (visitorCount) {
-              visitorCount.textContent = "N/A";
-            }
+            setVisitorCount("N/A");
           });
       });
     </script>
@@ -245,12 +247,12 @@
               <pre class="project-pre">
 <span class="project-card-title">[ PROJECT_02 ]</span>
 ─────────────────────
-> NAME: Calculator
-> STACK: JS / CSS
+> NAME: 3D Maze
+> STACK: Raspberry Pi
 > STATUS: In Progress
 > YEAR: 2026
 
-[ <a class="project-link" href="project-under-construction.html">VIEW_PROJECT</a> ]
+[ <a class="project-link" href="raspberry-pi-3d-maze.html">VIEW_PROJECT</a> ]
             </pre>
               <pre class="project-pre">
 <span class="project-card-title">[ PROJECT_03 ]</span>

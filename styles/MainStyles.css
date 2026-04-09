@@ -45,6 +45,78 @@
   /* Animations */
   --transition-speed: 0.5s;
 }
+
+/* Raspberry Pi 3D Maze project page */
+.project-video-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 80px;
+}
+
+.project-video-panel {
+  width: fit-content;
+  max-width: min(760px, 84vw);
+  min-height: 70vh;
+  margin: 0 auto;
+  border-top: var(--hud-border-top);
+  border-bottom: var(--hud-border-bottom);
+  border-left: var(--hud-border-left);
+  background: var(--hud-panel-bg);
+  box-shadow: var(--hud-glow-soft);
+  padding: 22px;
+}
+
+.project-video-panel h2 {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  margin-bottom: 18px;
+  color: var(--main-text-color);
+}
+
+.video-wrapper {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  border-top: var(--hud-border-top);
+  border-bottom: var(--hud-border-bottom);
+  border-left: var(--hud-border-left);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+}
+
+.video-wrapper video {
+  width: auto;
+  max-width: 100%;
+  max-height: 60vh;
+  height: auto;
+  display: block;
+  background: #000;
+  object-fit: contain;
+}
+
+.project-video-description {
+  margin-top: 16px;
+  line-height: 1.7;
+  color: var(--secondary-text-color);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 700px) {
+  .project-video-page {
+    padding: 24px 14px 44px;
+  }
+
+  .project-video-panel {
+    width: fit-content;
+    max-width: 90vw;
+    padding: 14px;
+  }
+}
 /* keyframes */
 @keyframes glitch {
   0%,
@@ -302,7 +374,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 *,
